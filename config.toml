@@ -1,4 +1,5 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+# GitHub project pages are served from the repository subpath.
+baseURL = "https://fcaj-aws.github.io/report/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"

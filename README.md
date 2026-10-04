@@ -1,13 +1,14 @@
-# 🚀 FCJ Track 2 — Part-time 6-Month DevOps & Cloud Roadmap
+# 🚀 FCAJ Track 2 — DevOps & Cloud Roadmap
 
-> **Mục tiêu:** Từ nền tảng Linux/Networking → Docker → CI/CD → AWS → Terraform → ECS → Observability → High Availability → Production Deployment → FCJ Track 2 Project.
+> **Objective:** Linux/Networking foundation → Docker → CI/CD → AWS → Terraform → ECS → Observability → High Availability → Production Deployment → Final Project.
 >
-> **Thời lượng:** 6 tháng / 24 tuần
-> **Hình thức:** Part-time
-> **Thời gian:** ~10–12 giờ/tuần
-> **Tổng thời lượng:** ~240–288 giờ
-> **Project xuyên suốt:** `reluster`
-> **Project hỗ trợ:** `spfi`
+> **Period:** 6 months / 24 weeks
+>
+> **Format:** Part-time
+>
+> **Time commitment:** ~10–12 hours/week
+>
+> **Total time:** ~240–288 hours
 
 ---
 
@@ -24,20 +25,20 @@
 - [Phase 4 — AWS Core](#phase-4--aws-core)
 - [Phase 5 — Terraform + ECS](#phase-5--terraform--ecs)
 - [Phase 6 — Observability + HA + Production](#phase-6--observability--ha--production)
-- [🏆 Final Project](#-final-project)
-- [📚 Resources](#-resources)
+- [🏆 Week 24 — FCJ Final Project](#-week-24--fcj-final-project)
+- [📚 Documentation Requirements](#-documentation-requirements)
 - [🧠 Interview Checklist](#-interview-checklist)
 - [🏁 Final Definition of Done](#-final-definition-of-done)
 
 ---
 
-# 🎯 Goal
+## 🎯 Goal
 
-## Primary Goal
+### Primary Goal
 
-Sau 6 tháng, có khả năng:
+After six months, you will be able to:
 
-- [ ] Linux administration cơ bản → intermediate
+- [ ] Basic-to-intermediate Linux administration
 - [ ] Troubleshoot networking
 - [ ] Git/GitHub workflow
 - [ ] Dockerize application
@@ -65,7 +66,7 @@ Sau 6 tháng, có khả năng:
 
 ---
 
-# 🧭 Learning Philosophy
+## 🧭 Learning Philosophy
 
 ```text
 Theory
@@ -92,11 +93,11 @@ Apply to Project
 | Project       |   40% |
 | Documentation |   10% |
 
-> **Rule:** Không học một technology chỉ để "biết nó tồn tại". Phải có lab hoặc project chứng minh.
+> **Rule:** Do not study a technology merely to know that it exists. Prove your understanding with a lab or project.
 
 ---
 
-# 🗺️ Roadmap Overview
+## 🗺️ Roadmap Overview
 
 | Phase |   Duration | Focus                    | Output                    |
 | ----- | ---------: | ------------------------ | ------------------------- |
@@ -111,7 +112,7 @@ Apply to Project
 
 ---
 
-# ⏱️ Weekly Schedule
+## ⏱️ Weekly Schedule
 
 Recommended:
 
@@ -127,15 +128,15 @@ Sunday       3h
 Total       ~12h/week
 ```
 
-Nếu chỉ có 8h/week:
+If you only have 8 hours per week:
 
-> Giữ nguyên thứ tự roadmap nhưng kéo dài mỗi phase thêm 25–50%.
+> Keep the roadmap in the same order, but extend each phase by 25–50%.
 
 ---
 
-# 📊 Progress Tracking
+## 📊 Progress Tracking
 
-## Overall Progress
+### Overall Progress
 
 - [ ] Phase 0 — Environment
 - [ ] Phase 1 — Linux + Networking + Git
@@ -146,7 +147,7 @@ Nếu chỉ có 8h/week:
 - [ ] Phase 6 — Observability + HA
 - [ ] Final Project
 
-## Progress
+### Progress
 
 ```text
 Phase 0  [ ]  0%
@@ -162,7 +163,7 @@ Overall  [ ]  0%
 
 ---
 
-# PHASE 0 — Environment
+## Phase 0 — Environment
 
 > **Duration:** Week 0
 > **Estimated time:** 4–6 hours
@@ -170,11 +171,11 @@ Overall  [ ]  0%
 <details>
 <summary><strong>🛠️ Week 0 — Development Environment</strong></summary>
 
-## Objectives
+### Objectives
 
-Chuẩn bị workstation để có thể học toàn bộ roadmap.
+Set up a workstation that supports the entire roadmap.
 
-## Install
+### Install
 
 - [ ] WSL2
 - [ ] Ubuntu
@@ -191,7 +192,7 @@ Chuẩn bị workstation để có thể học toàn bộ roadmap.
 - [ ] wget
 - [ ] make
 
-## Verify
+### Verify
 
 ```bash
 git --version
@@ -204,7 +205,7 @@ curl --version
 jq --version
 ```
 
-## Git Configuration
+### Git Configuration
 
 ```bash
 git config --global user.name "Your Name"
@@ -212,7 +213,7 @@ git config --global user.email "your@email.com"
 git config --global init.defaultBranch main
 ```
 
-## Create Learning Repository
+### Create Learning Repository
 
 ```text
 fcj-track2-lab/
@@ -230,36 +231,36 @@ fcj-track2-lab/
 └── README.md
 ```
 
-## Deliverables
+### Deliverables
 
 - [ ] Development environment ready
 - [ ] GitHub repository created
 - [ ] First commit pushed
 - [ ] README initialized
 
-## Definition of Done
+### Definition of Done
 
-> Có thể clone repo trên một máy mới và setup toàn bộ môi trường theo README.
+> You can clone the repository on a new machine and set up the entire environment by following this README.
 
 </details>
 
 ---
 
-# PHASE 1 — Linux + Networking + Git
+## Phase 1 — Linux + Networking + Git
 
 > **Duration:** Week 1–4
 > **Estimated:** 40–48 hours
 
 ---
 
-## 🐧 Week 1 — Linux Fundamentals
+### 🐧 Week 1 — Linux Fundamentals
 
 <details>
 <summary><strong>Expand Week 1</strong></summary>
 
-### Topics
+#### Topics
 
-#### Linux Filesystem
+##### Linux Filesystem
 
 - [ ] `/`
 - [ ] `/bin`
@@ -274,7 +275,7 @@ fcj-track2-lab/
 - [ ] `/usr`
 - [ ] `/var`
 
-#### File Operations
+##### File Operations
 
 ```bash
 ls
@@ -288,7 +289,7 @@ touch
 find
 ```
 
-#### Text Processing
+##### Text Processing
 
 ```bash
 cat
@@ -304,7 +305,7 @@ cut
 xargs
 ```
 
-#### Permissions
+##### Permissions
 
 ```bash
 chmod
@@ -328,7 +329,7 @@ Examples:
 700
 ```
 
-#### Shell
+##### Shell
 
 - [ ] Variables
 - [ ] Environment variables
@@ -341,7 +342,7 @@ Examples:
 - [ ] `&&`
 - [ ] `||`
 
-### Labs
+#### Labs
 
 - [ ] Create users
 - [ ] Create groups
@@ -350,7 +351,7 @@ Examples:
 - [ ] Parse logs with grep/awk
 - [ ] Write basic bash scripts
 
-### Mini Project
+#### Mini Project
 
 Create:
 
@@ -366,7 +367,7 @@ Requirements:
 - [ ] Find top error messages
 - [ ] Output summary
 
-### Deliverable
+#### Deliverable
 
 ```text
 linux/
@@ -377,23 +378,23 @@ linux/
     └── linux-log-analyzer.sh
 ```
 
-### Definition of Done
+#### Definition of Done
 
-- [ ] Có thể thao tác Linux CLI không cần GUI
-- [ ] Hiểu permissions
-- [ ] Viết bash script cơ bản
-- [ ] Đọc được log
+- [ ] Use the Linux CLI without a GUI
+- [ ] Understand permissions
+- [ ] Write basic Bash scripts
+- [ ] Read logs
 
 </details>
 
 ---
 
-# ⚙️ Week 2 — Process + System Administration
+### ⚙️ Week 2 — Process + System Administration
 
 <details>
 <summary><strong>Expand Week 2</strong></summary>
 
-## Process
+#### Process
 
 ```bash
 ps
@@ -408,7 +409,7 @@ nice
 renice
 ```
 
-## Services
+#### Services
 
 ```bash
 systemctl
@@ -423,7 +424,7 @@ Learn:
 - [ ] restart
 - [ ] logs
 
-## Resource Management
+#### Resource Management
 
 CPU:
 
@@ -447,14 +448,14 @@ du -sh
 lsblk
 ```
 
-## Networking Processes
+#### Networking Processes
 
 ```bash
 ss -lntp
 lsof -i
 ```
 
-## Lab
+#### Lab
 
 Create:
 
@@ -471,7 +472,7 @@ Requirements:
 - [ ] Logs
 - [ ] Failure recovery
 
-## Troubleshooting Exercise
+#### Troubleshooting Exercise
 
 Simulate:
 
@@ -491,20 +492,20 @@ Symptom
 → Prevention
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể troubleshoot một Linux server cơ bản mà không cần restart máy một cách mù quáng.
+> You can troubleshoot a basic Linux server without blindly restarting the machine.
 
 </details>
 
 ---
 
-# 🌐 Week 3 — Networking Fundamentals
+### 🌐 Week 3 — Networking Fundamentals
 
 <details>
 <summary><strong>Expand Week 3</strong></summary>
 
-## Core Concepts
+#### Core Concepts
 
 - [ ] IP
 - [ ] MAC
@@ -521,7 +522,7 @@ Symptom
 - [ ] Subnet
 - [ ] CIDR
 
-## HTTP
+#### HTTP
 
 Understand:
 
@@ -536,7 +537,7 @@ Status Code
 Cookies
 ```
 
-## Commands
+#### Commands
 
 ```bash
 ip addr
@@ -550,7 +551,7 @@ traceroute
 tcpdump
 ```
 
-## Important Exercise
+#### Important Exercise
 
 Explain:
 
@@ -574,7 +575,7 @@ HTTP
 Response
 ```
 
-## Lab
+#### Lab
 
 - [ ] DNS troubleshooting
 - [ ] Port troubleshooting
@@ -582,20 +583,20 @@ Response
 - [ ] TCP connection inspection
 - [ ] Capture packets with tcpdump
 
-### Definition of Done
+#### Definition of Done
 
-> Khi application không connect được database/Redis/API, biết bắt đầu debug từ đâu.
+> When an application cannot connect to a database, Redis, or an API, you know where to begin debugging.
 
 </details>
 
 ---
 
-# 🌿 Week 4 — Git + GitHub
+### 🌿 Week 4 — Git + GitHub
 
 <details>
 <summary><strong>Expand Week 4</strong></summary>
 
-## Git Fundamentals
+#### Git Fundamentals
 
 ```bash
 git init
@@ -607,7 +608,7 @@ git log
 git diff
 ```
 
-## Branching
+#### Branching
 
 ```bash
 git branch
@@ -616,7 +617,7 @@ git merge
 git rebase
 ```
 
-## Advanced
+#### Advanced
 
 ```bash
 git stash
@@ -625,7 +626,7 @@ git reset
 git revert
 ```
 
-## GitHub
+#### GitHub
 
 - [ ] Pull Request
 - [ ] Code Review
@@ -634,7 +635,7 @@ git revert
 - [ ] Tag
 - [ ] GitHub Actions
 
-## Semantic Versioning
+#### Semantic Versioning
 
 ```text
 MAJOR.MINOR.PATCH
@@ -648,7 +649,7 @@ v1.1.0
 v1.1.1
 ```
 
-## Lab
+#### Lab
 
 Create:
 
@@ -665,7 +666,7 @@ main
  └── bugfix/c
 ```
 
-### Deliverable
+#### Deliverable
 
 - [ ] Branch workflow
 - [ ] PR
@@ -673,27 +674,27 @@ main
 - [ ] Merge
 - [ ] Release tag
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể xử lý conflict, rebase, revert và cherry-pick mà không hoảng.
+> You can resolve conflicts and confidently rebase, revert, and cherry-pick.
 
 </details>
 
 ---
 
-# PHASE 2 — Docker
+## Phase 2 — Docker
 
 > **Duration:** Week 5–8
 > **Estimated:** 40–48 hours
 
 ---
 
-# 🐳 Week 5 — Docker Fundamentals
+### 🐳 Week 5 — Docker Fundamentals
 
 <details>
 <summary><strong>Expand Week 5</strong></summary>
 
-## Concepts
+#### Concepts
 
 - [ ] Image
 - [ ] Container
@@ -703,7 +704,7 @@ main
 - [ ] Network
 - [ ] Docker daemon
 
-## Commands
+#### Commands
 
 ```bash
 docker pull
@@ -720,7 +721,7 @@ docker volume
 docker network
 ```
 
-## Labs
+#### Labs
 
 - [ ] Run Nginx
 - [ ] Run Redis
@@ -731,20 +732,20 @@ docker network
 - [ ] Create/remove volumes
 - [ ] Create Docker network
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể giải thích chính xác Image khác Container như thế nào.
+> You can explain precisely how an image differs from a container.
 
 </details>
 
 ---
 
-# 🧱 Week 6 — Dockerfile
+### 🧱 Week 6 — Dockerfile
 
 <details>
 <summary><strong>Expand Week 6</strong></summary>
 
-## Dockerfile
+#### Dockerfile
 
 Learn:
 
@@ -761,7 +762,7 @@ CMD
 ENTRYPOINT
 ```
 
-## Best Practices
+#### Best Practices
 
 - [ ] Multi-stage build
 - [ ] Non-root user
@@ -770,7 +771,7 @@ ENTRYPOINT
 - [ ] Small base image
 - [ ] Healthcheck
 
-## Lab
+#### Lab
 
 Dockerize a backend.
 
@@ -783,7 +784,7 @@ Requirements:
 - [ ] Healthcheck
 - [ ] `.dockerignore`
 
-## Benchmark
+#### Benchmark
 
 Compare:
 
@@ -798,20 +799,20 @@ Measure:
 - [ ] Build time
 - [ ] Startup time
 
-### Definition of Done
+#### Definition of Done
 
-> Tự viết Dockerfile production-ready thay vì copy Dockerfile từ tutorial.
+> You can write a production-ready Dockerfile instead of copying one from a tutorial.
 
 </details>
 
 ---
 
-# 🌐 Week 7 — Docker Networking + Storage
+### 🌐 Week 7 — Docker Networking + Storage
 
 <details>
 <summary><strong>Expand Week 7</strong></summary>
 
-## Networking
+#### Networking
 
 - [ ] bridge
 - [ ] host
@@ -819,13 +820,13 @@ Measure:
 - [ ] port mapping
 - [ ] container-to-container communication
 
-## Storage
+#### Storage
 
 - [ ] Volume
 - [ ] Bind mount
 - [ ] tmpfs
 
-## Lab
+#### Lab
 
 Build:
 
@@ -842,7 +843,7 @@ Requirements:
 - [ ] Redis communication
 - [ ] Health checks
 
-### Troubleshooting
+#### Troubleshooting
 
 Break:
 
@@ -853,20 +854,20 @@ Break:
 
 Then debug.
 
-### Definition of Done
+#### Definition of Done
 
-> Hiểu tại sao container không nên dùng `localhost` để gọi container khác.
+> You understand why a container should not use `localhost` to communicate with another container.
 
 </details>
 
 ---
 
-# 🧩 Week 8 — Docker Compose
+### 🧩 Week 8 — Docker Compose
 
 <details>
 <summary><strong>Expand Week 8</strong></summary>
 
-## Learn
+#### Learn
 
 ```yaml
 services:
@@ -879,7 +880,7 @@ secrets:
 profiles:
 ```
 
-## Build Stack
+#### Build Stack
 
 ```text
 API
@@ -890,7 +891,7 @@ API
 └── Grafana
 ```
 
-## Requirements
+#### Requirements
 
 - [ ] `.env`
 - [ ] Healthcheck
@@ -899,7 +900,7 @@ API
 - [ ] Service dependencies
 - [ ] Production profile
 
-### Deliverable
+#### Deliverable
 
 ```bash
 docker compose up -d
@@ -907,7 +908,7 @@ docker compose up -d
 
 should start entire stack.
 
-### Definition of Done
+#### Definition of Done
 
 - [ ] Reproducible environment
 - [ ] One-command startup
@@ -918,18 +919,18 @@ should start entire stack.
 
 ---
 
-# PHASE 3 — CI/CD
+## Phase 3 — CI/CD
 
 > **Duration:** Week 9–12
 
 ---
 
-# 🔄 Week 9 — CI Fundamentals
+### 🔄 Week 9 — CI Fundamentals
 
 <details>
 <summary><strong>Expand Week 9</strong></summary>
 
-## Concepts
+#### Concepts
 
 - [ ] CI
 - [ ] Continuous Delivery
@@ -941,7 +942,7 @@ should start entire stack.
 - [ ] Secret
 - [ ] Environment
 
-## GitHub Actions
+#### GitHub Actions
 
 Learn:
 
@@ -957,7 +958,7 @@ with:
 env:
 ```
 
-## Pipeline
+#### Pipeline
 
 ```text
 Push
@@ -969,15 +970,15 @@ Test
 Build
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Mỗi Pull Request đều tự động chạy CI.
+> Every pull request runs CI automatically.
 
 </details>
 
 ---
 
-# 🐳 Week 10 — Docker CI/CD
+### 🐳 Week 10 — Docker CI/CD
 
 <details>
 <summary><strong>Expand Week 10</strong></summary>
@@ -998,7 +999,7 @@ Docker Push
 GHCR
 ```
 
-## Tagging
+#### Tagging
 
 Implement:
 
@@ -1007,34 +1008,34 @@ Implement:
 - [ ] commit SHA
 - [ ] release tag
 
-### Lab
+#### Lab
 
 - [ ] Build Docker image automatically
 - [ ] Push to GHCR
 - [ ] Pull image locally
 - [ ] Verify image
 
-### Definition of Done
+#### Definition of Done
 
-> `git push` → Docker image tự động xuất hiện trên registry.
+> `git push` → A Docker image is automatically published to the registry.
 
 </details>
 
 ---
 
-# 🔐 Week 11 — Security in CI
+### 🔐 Week 11 — Security in CI
 
 <details>
 <summary><strong>Expand Week 11</strong></summary>
 
-## Security Concepts
+#### Security Concepts
 
 - [ ] SAST
 - [ ] Dependency scanning
 - [ ] Container scanning
 - [ ] Secret scanning
 
-## Pipeline
+#### Pipeline
 
 ```text
 Lint
@@ -1050,7 +1051,7 @@ Docker Build
 Container Scan
 ```
 
-## Secrets
+#### Secrets
 
 Never commit:
 
@@ -1062,15 +1063,15 @@ AWS access key
 private key
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Pipeline có thể fail nếu phát hiện vulnerability nghiêm trọng.
+> The pipeline fails when it detects a critical vulnerability.
 
 </details>
 
 ---
 
-# 🚀 Week 12 — Production CI/CD
+### 🚀 Week 12 — Production CI/CD
 
 <details>
 <summary><strong>Expand Week 12</strong></summary>
@@ -1106,26 +1107,26 @@ Implement:
 - [ ] Secrets
 - [ ] Artifacts
 
-### Definition of Done
+#### Definition of Done
 
-> Có một CI/CD pipeline đủ tốt để dùng làm nền tảng production deployment.
+> You have a CI/CD pipeline suitable as the foundation for production deployment.
 
 </details>
 
 ---
 
-# PHASE 4 — AWS CORE
+## Phase 4 — AWS Core
 
 > **Duration:** Week 13–16
 
 ---
 
-# ☁️ Week 13 — AWS Fundamentals
+### ☁️ Week 13 — AWS Fundamentals
 
 <details>
 <summary><strong>Expand Week 13</strong></summary>
 
-## Learn
+#### Learn
 
 - [ ] Region
 - [ ] Availability Zone
@@ -1149,9 +1150,9 @@ Region
 └── AZ-c
 ```
 
-### Architecture Exercise
+#### Architecture Exercise
 
-Vẽ:
+Draw:
 
 ```text
 Internet
@@ -1163,15 +1164,15 @@ Application
 Database
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể giải thích tại sao AWS architecture cần nhiều AZ.
+> You can explain why an AWS architecture needs multiple Availability Zones.
 
 </details>
 
 ---
 
-# 🔑 Week 14 — IAM
+### 🔑 Week 14 — IAM
 
 <details>
 <summary><strong>Expand Week 14</strong></summary>
@@ -1186,11 +1187,11 @@ Learn:
 - [ ] Trust policy
 - [ ] Resource policy
 
-## Principle
+#### Principle
 
 > Least Privilege
 
-## Lab
+#### Lab
 
 Create:
 
@@ -1209,26 +1210,26 @@ Practice:
 - [ ] Resource restriction
 - [ ] Action restriction
 
-### Security Rule
+#### Security Rule
 
-- [ ] Không dùng root cho workload
-- [ ] Không hardcode AWS keys
-- [ ] Dùng IAM Role khi có thể
+- [ ] Do not use the root user for workloads
+- [ ] Do not hardcode AWS keys
+- [ ] Use IAM roles whenever possible
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể đọc và tự viết IAM policy đơn giản.
+> You can read and write a simple IAM policy.
 
 </details>
 
 ---
 
-# 🌐 Week 15 — VPC
+### 🌐 Week 15 — VPC
 
 <details>
 <summary><strong>Expand Week 15</strong></summary>
 
-## Learn
+#### Learn
 
 - [ ] VPC
 - [ ] CIDR
@@ -1240,7 +1241,7 @@ Practice:
 - [ ] Security Group
 - [ ] NACL
 
-## Architecture
+#### Architecture
 
 ```text
 Internet
@@ -1261,11 +1262,11 @@ Application
 Database
 ```
 
-### Lab
+#### Lab
 
 Create VPC manually.
 
-### Troubleshooting
+#### Troubleshooting
 
 Simulate:
 
@@ -1274,15 +1275,15 @@ Simulate:
 - [ ] Security group block
 - [ ] Private subnet unable to access internet
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể đọc VPC diagram và biết traffic đi qua đâu.
+> You can read a VPC diagram and trace the path that traffic takes.
 
 </details>
 
 ---
 
-# 🖥️ Week 16 — EC2 + ECR + ALB + CloudWatch
+### 🖥️ Week 16 — EC2 + ECR + ALB + CloudWatch
 
 <details>
 <summary><strong>Expand Week 16</strong></summary>
@@ -1310,7 +1311,7 @@ Learn:
 - [ ] CloudWatch Logs
 - [ ] CloudWatch Metrics
 
-### Deliverable
+#### Deliverable
 
 Application accessible through:
 
@@ -1318,7 +1319,7 @@ Application accessible through:
 ALB → EC2 → Docker
 ```
 
-### Definition of Done
+#### Definition of Done
 
 - [ ] Docker image from ECR
 - [ ] ALB
@@ -1330,13 +1331,13 @@ ALB → EC2 → Docker
 
 ---
 
-# PHASE 5 — Terraform + ECS
+## Phase 5 — Terraform + ECS
 
 > **Duration:** Week 17–20
 
 ---
 
-# 🏗️ Week 17 — Terraform Fundamentals
+### 🏗️ Week 17 — Terraform Fundamentals
 
 <details>
 <summary><strong>Expand Week 17</strong></summary>
@@ -1363,7 +1364,7 @@ terraform apply
 terraform destroy
 ```
 
-### Lab
+#### Lab
 
 Provision:
 
@@ -1373,15 +1374,15 @@ S3
 Security Group
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Infrastructure có thể tạo/xóa bằng code.
+> Infrastructure can be created and destroyed as code.
 
 </details>
 
 ---
 
-# ☁️ Week 18 — Terraform AWS
+### ☁️ Week 18 — Terraform AWS
 
 <details>
 <summary><strong>Expand Week 18</strong></summary>
@@ -1420,15 +1421,15 @@ Implement:
 - [ ] Remote state concept
 - [ ] State locking concept
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể destroy toàn bộ infrastructure rồi recreate bằng Terraform.
+> You can destroy the entire infrastructure and recreate it with Terraform.
 
 </details>
 
 ---
 
-# 🚢 Week 19 — ECS + Fargate
+### 🚢 Week 19 — ECS + Fargate
 
 <details>
 <summary><strong>Expand Week 19</strong></summary>
@@ -1458,11 +1459,11 @@ Internet
 ECS Task   ECS Task
 ```
 
-### Lab
+#### Lab
 
 Deploy Docker application to ECS Fargate.
 
-### Definition of Done
+#### Definition of Done
 
 - [ ] ECS service running
 - [ ] 2 tasks
@@ -1474,7 +1475,7 @@ Deploy Docker application to ECS Fargate.
 
 ---
 
-# 🔁 Week 20 — Terraform + ECS + CI/CD
+### 🔁 Week 20 — Terraform + ECS + CI/CD
 
 <details>
 <summary><strong>Expand Week 20</strong></summary>
@@ -1517,7 +1518,7 @@ Terraform
 └── CloudWatch
 ```
 
-### Definition of Done
+#### Definition of Done
 
 > `git push` → CI → Docker → ECR → ECS deployment.
 
@@ -1525,13 +1526,13 @@ Terraform
 
 ---
 
-# PHASE 6 — Observability + HA + Production
+## Phase 6 — Observability + HA + Production
 
 > **Duration:** Week 21–24
 
 ---
 
-# 📊 Week 21 — Observability
+### 📊 Week 21 — Observability
 
 <details>
 <summary><strong>Expand Week 21</strong></summary>
@@ -1563,7 +1564,7 @@ Metrics:
 - [ ] Redis connections
 - [ ] Redis memory
 
-### Troubleshooting Lab
+#### Troubleshooting Lab
 
 Create artificial:
 
@@ -1583,15 +1584,15 @@ Symptom
 → Fix
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Không chỉ nhìn CPU; biết dùng metrics/logs để tìm root cause.
+> You look beyond CPU usage and use metrics and logs to identify the root cause.
 
 </details>
 
 ---
 
-# 📈 Week 22 — Prometheus + Grafana
+### 📈 Week 22 — Prometheus + Grafana
 
 <details>
 <summary><strong>Expand Week 22</strong></summary>
@@ -1631,20 +1632,20 @@ Redis unavailable
 Container unhealthy
 ```
 
-### Definition of Done
+#### Definition of Done
 
-> Có dashboard đủ để quan sát application mà không cần SSH vào server.
+> You have dashboards that provide application visibility without requiring SSH access to the server.
 
 </details>
 
 ---
 
-# 🔀 Week 23 — HA + Deployment Strategy
+### 🔀 Week 23 — HA + Deployment Strategy
 
 <details>
 <summary><strong>Expand Week 23</strong></summary>
 
-## High Availability
+#### High Availability
 
 Learn:
 
@@ -1656,7 +1657,7 @@ Learn:
 - [ ] Auto Scaling
 - [ ] Graceful shutdown
 
-## Rolling Deployment
+#### Rolling Deployment
 
 ```text
 v1 v1 v1
@@ -1668,7 +1669,7 @@ v1 v2 v2
 v2 v2 v2
 ```
 
-## Blue/Green
+#### Blue/Green
 
 ```text
           ALB
@@ -1679,7 +1680,7 @@ v2 v2 v2
      v1         v2
 ```
 
-## Canary
+#### Canary
 
 ```text
 95% → v1
@@ -1694,22 +1695,20 @@ Implement at least:
 - [ ] Health check
 - [ ] Failure simulation
 
-### Definition of Done
+#### Definition of Done
 
-> Có thể deploy version mới và rollback khi deployment fail.
+> You can deploy a new version and roll back when the deployment fails.
 
 </details>
 
 ---
 
-# 🏆 Week 24 — FCJ Final Project
+### 🏆 Week 24 — FCJ Final Project
 
 <details>
 <summary><strong>Expand Week 24</strong></summary>
 
-# Final Project
-
-## Project Direction
+#### Project Direction
 
 > **Highly Available, Observable, Containerized Backend Platform on AWS**
 
@@ -1736,7 +1735,7 @@ for:
 
 ---
 
-## Target Architecture
+#### Target Architecture
 
 ```text
                          Internet
@@ -1768,7 +1767,7 @@ for:
 
 ---
 
-# CI/CD Architecture
+#### CI/CD Architecture
 
 ```text
 GitHub
@@ -1803,7 +1802,7 @@ Pull Request
 
 ---
 
-# Infrastructure as Code
+#### Infrastructure as Code
 
 ```text
 Terraform
@@ -1822,9 +1821,9 @@ Terraform
 
 ---
 
-# Final Project Requirements
+#### Final Project Requirements
 
-## Infrastructure
+##### Infrastructure
 
 - [ ] AWS VPC
 - [ ] Multi-AZ
@@ -1838,7 +1837,7 @@ Terraform
 - [ ] CloudWatch
 - [ ] Redis
 
-## IaC
+##### IaC
 
 - [ ] Terraform
 - [ ] Variables
@@ -1847,7 +1846,7 @@ Terraform
 - [ ] State management
 - [ ] Reproducible infrastructure
 
-## CI/CD
+##### CI/CD
 
 - [ ] Pull Request checks
 - [ ] Lint
@@ -1859,7 +1858,7 @@ Terraform
 - [ ] ECS deployment
 - [ ] Rollback
 
-## Observability
+##### Observability
 
 - [ ] Prometheus
 - [ ] Grafana
@@ -1868,7 +1867,7 @@ Terraform
 - [ ] Alerts
 - [ ] Health checks
 
-## Reliability
+##### Reliability
 
 - [ ] Redis replication
 - [ ] Failover
@@ -1877,7 +1876,7 @@ Terraform
 - [ ] Graceful shutdown
 - [ ] Deployment rollback
 
-## Security
+##### Security
 
 - [ ] IAM least privilege
 - [ ] No hardcoded secrets
@@ -1889,7 +1888,7 @@ Terraform
 
 ---
 
-# 📚 Documentation Requirements
+#### 📚 Documentation Requirements
 
 Project MUST contain:
 
@@ -1915,7 +1914,7 @@ CONTRIBUTING.md
 
 ---
 
-# 📝 Architecture Decision Records
+#### 📝 Architecture Decision Records
 
 For important decisions, create ADRs.
 
@@ -1942,11 +1941,11 @@ Consequences
 
 ---
 
-# 🧪 Failure Simulation
+#### 🧪 Failure Simulation
 
 Final project must intentionally break things.
 
-## Scenario 1 — ECS Task Failure
+##### Scenario 1 — ECS Task Failure
 
 ```text
 Kill Task
@@ -1964,7 +1963,7 @@ Traffic restored
 - [ ] Document
 - [ ] Measure recovery time
 
-## Scenario 2 — Redis Failure
+##### Scenario 2 — Redis Failure
 
 ```text
 Redis node
@@ -1980,7 +1979,7 @@ Application continues
 - [ ] Document
 - [ ] Measure recovery
 
-## Scenario 3 — Bad Deployment
+##### Scenario 3 — Bad Deployment
 
 ```text
 v1
@@ -1997,7 +1996,7 @@ v1
 - [ ] Test
 - [ ] Document
 
-## Scenario 4 — High Traffic
+##### Scenario 4 — High Traffic
 
 Simulate load.
 
@@ -2011,7 +2010,7 @@ Measure:
 
 ---
 
-# 📊 Final Project Metrics
+#### 📊 Final Project Metrics
 
 Track:
 
@@ -2029,19 +2028,19 @@ Track:
 
 ---
 
-# 🎤 FCJ Presentation Preparation
+#### 🎤 FCJ Presentation Preparation
 
 Prepare a 10–15 minute presentation.
 
-## 1. Problem
+##### 1. Problem
 
 What problem are you solving?
 
-## 2. Architecture
+##### 2. Architecture
 
 Why this architecture?
 
-## 3. Infrastructure
+##### 3. Infrastructure
 
 Why:
 
@@ -2051,7 +2050,7 @@ Why:
 - Redis?
 - Terraform?
 
-## 4. CI/CD
+##### 4. CI/CD
 
 Show:
 
@@ -2064,11 +2063,11 @@ Git Push
 → Deploy
 ```
 
-## 5. Observability
+##### 5. Observability
 
 Show Grafana dashboard.
 
-## 6. Failure Demo
+##### 6. Failure Demo
 
 Demonstrate:
 
@@ -2078,7 +2077,7 @@ Kill service
 → Recovery
 ```
 
-## 7. Deployment Demo
+##### 7. Deployment Demo
 
 Show:
 
@@ -2089,7 +2088,7 @@ v1
 → rollback
 ```
 
-## 8. Security
+##### 8. Security
 
 Explain:
 
@@ -2099,7 +2098,7 @@ Explain:
 - Security Groups
 - Container scanning
 
-## 9. Cost
+##### 9. Cost
 
 Explain:
 
@@ -2110,7 +2109,7 @@ Explain:
 - Redis
 - ECR
 
-## 10. Lessons Learned
+##### 10. Lessons Learned
 
 Explain:
 
@@ -2119,13 +2118,15 @@ Explain:
 - How fixed?
 - What would you change?
 
+</details>
+
 ---
 
-# 🧠 Interview Checklist
+## 🧠 Interview Checklist
 
 Before finishing the roadmap, answer these without Google.
 
-## Linux
+### Linux
 
 - [ ] Process vs thread
 - [ ] SIGTERM vs SIGKILL
@@ -2135,7 +2136,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] memory usage
 - [ ] disk full
 
-## Networking
+### Networking
 
 - [ ] TCP handshake
 - [ ] DNS
@@ -2147,7 +2148,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] routing
 - [ ] firewall
 
-## Docker
+### Docker
 
 - [ ] Image vs container
 - [ ] Layer
@@ -2157,7 +2158,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] ENTRYPOINT vs CMD
 - [ ] Docker security
 
-## CI/CD
+### CI/CD
 
 - [ ] CI vs CD
 - [ ] Pipeline
@@ -2166,7 +2167,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] Secret
 - [ ] Deployment strategy
 
-## AWS
+### AWS
 
 - [ ] Region
 - [ ] AZ
@@ -2180,7 +2181,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] S3
 - [ ] RDS
 
-## Terraform
+### Terraform
 
 - [ ] State
 - [ ] Plan
@@ -2190,7 +2191,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] Output
 - [ ] Drift
 
-## ECS
+### ECS
 
 - [ ] Cluster
 - [ ] Task
@@ -2200,7 +2201,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] Health check
 - [ ] Auto Scaling
 
-## Observability
+### Observability
 
 - [ ] Logs
 - [ ] Metrics
@@ -2210,7 +2211,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] Prometheus
 - [ ] Grafana
 
-## Reliability
+### Reliability
 
 - [ ] HA
 - [ ] Failover
@@ -2220,7 +2221,7 @@ Before finishing the roadmap, answer these without Google.
 - [ ] RTO
 - [ ] RPO
 
-## Deployment
+### Deployment
 
 - [ ] Rolling
 - [ ] Blue/Green
@@ -2229,7 +2230,7 @@ Before finishing the roadmap, answer these without Google.
 
 ---
 
-# 🚫 What NOT to Learn During This 6-Month Roadmap
+## 🚫 What NOT to Learn During This 6-Month Roadmap
 
 Avoid scope creep.
 
@@ -2243,13 +2244,13 @@ Avoid scope creep.
 - [ ] ❌ Complex microservices
 - [ ] ❌ Service Mesh
 
-> **Rule:** Nếu technology không trực tiếp giúp hoàn thành project FCJ → postpone.
+> **Rule:** If a technology does not directly help complete the FCJ project, postpone it.
 
 ---
 
-# 🧭 After 6 Months — Kubernetes / EKS
+## 🧭 After 6 Months — Kubernetes / EKS
 
-Chỉ bắt đầu Kubernetes sau khi hoàn thành:
+Begin Kubernetes only after completing:
 
 ```text
 Linux
@@ -2269,7 +2270,7 @@ ECS
 Observability
 ```
 
-Sau đó:
+Then:
 
 ```text
 Docker
@@ -2296,21 +2297,21 @@ Topics:
 
 ---
 
-# 🏁 Final Definition of Done
+## 🏁 Final Definition of Done
 
-Sau 6 tháng, roadmap được xem là **DONE** khi bạn có thể:
+After six months, the roadmap is considered **DONE** when you can:
 
 ### Infrastructure
 
-- [ ] Tự thiết kế AWS architecture
-- [ ] Tự tạo VPC
-- [ ] Tự thiết kế public/private subnet
-- [ ] Tự cấu hình IAM
-- [ ] Tự deploy ECS
+- [ ] Design an AWS architecture independently
+- [ ] Create a VPC independently
+- [ ] Design public and private subnets independently
+- [ ] Configure IAM independently
+- [ ] Deploy ECS independently
 
 ### Containers
 
-- [ ] Tự viết production Dockerfile
+- [ ] Write a production-ready Dockerfile independently
 - [ ] Optimize image
 - [ ] Docker Compose
 - [ ] Health check
@@ -2362,7 +2363,7 @@ Sau 6 tháng, roadmap được xem là **DONE** khi bạn có thể:
 
 ---
 
-# 🎯 Final Outcome
+## 🎯 Final Outcome
 
 ```text
                  6-MONTH JOURNEY
@@ -2408,4 +2409,4 @@ Observability + HA
 └───────────────────────────┘
 ```
 
-> **North Star:** Không phải "biết Docker, AWS, Terraform..." mà là **có khả năng thiết kế → triển khai → tự động hóa → quan sát → troubleshoot → scale → rollback một hệ thống cloud thực tế.**
+> **North Star:** The goal is not merely to "know Docker, AWS, and Terraform." It is to **design → deploy → automate → observe → troubleshoot → scale → roll back a real-world cloud system.**
