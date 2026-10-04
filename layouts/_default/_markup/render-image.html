@@ -1,6 +1,0 @@
-{{- $destination := .Destination -}}
-{{- $url := urls.Parse $destination -}}
-{{- if not $url.IsAbs -}}
-  {{- $destination = (strings.TrimPrefix "/" $destination) | relURL -}}
-{{- end -}}
-<img src="{{ $destination | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}>
