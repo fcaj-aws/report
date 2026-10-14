@@ -1,125 +1,122 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Bài thu hoạch: "Kickoff FCAJ Buildrathon 2026 (Season 01) - The Thinking Behind Building The Bot"
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+**Tên sự kiện:** Buildrathon Kickoff: Code the Future with CMC Global
 
-### Mục Đích Của Sự Kiện
+**Thời gian:** Thứ Bảy, 26/09/2026, 09:00 - 12:00
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+**Địa điểm:** Văn phòng AWS Việt Nam, tầng 26 Bitexco Financial Tower, TP. Hồ Chí Minh
 
-### Danh Sách Diễn Giả
+**Vai trò:** Người tham dự, thành viên đội DawnMarch tham gia FCAJ Buildrathon 2026
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Mục tiêu sự kiện
 
-### Nội Dung Nổi Bật
+- Khởi động FCAJ Buildrathon 2026 (Season 01), sân chơi thực chiến kéo dài 6 tháng dành cho cộng đồng AI và Cloud tại Việt Nam. Các đội sẽ xây dựng sản phẩm thật trên AWS thay vì chỉ học lý thuyết, đúng với thông điệp của chương trình: _"Don't just learn Cloud & AI for knowledge - build real products, gain lifelong teammates, and make your mark in the tech world."_
+- Trang bị tư duy kiến trúc và cách triển khai AI Agent trong môi trường doanh nghiệp, thông qua talkshow _"The Thinking Behind Building The Bot"_.
+- Phân tích các bài toán kiểm thử thực tế và những thử thách kỹ thuật thường gặp khi đưa một con bot từ bản thử nghiệm lên vận hành thật.
+- Mở rộng kết nối và định hướng nghề nghiệp cùng đội ngũ chuyên gia công nghệ và HR của CMC Global, qua phần Mock-interview cuối chương trình.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+### Diễn giả và đơn vị tổ chức
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- **Thien Lu** - Program Manager, First Cloud AI Journey (FCAJ)
+- **Phong Pham** - Program Manager, First Cloud AI Journey (FCAJ)
+- **Bui Nhat Truong** - Technical Leader, CMC Global, diễn giả talkshow _"The Thinking Behind Building The Bot"_
+- **Đơn vị tổ chức và đồng hành:** AWS Study Group / First Cloud Journey phụ trách tổ chức và điều phối cộng đồng; CMC Global đồng tổ chức, phụ trách chuyên đề kỹ thuật và phần kết nối nghề nghiệp.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+### Chương trình
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+| Thời gian     | Nội dung                                        |
+| ------------- | ----------------------------------------------- |
+| 09:00 - 09:30 | Buildrathon Kickoff                             |
+| 09:30 - 11:15 | Talkshow "The Thinking Behind Building The Bot" |
+| 11:15 - 12:00 | Mock-interview                                  |
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+### Nội dung nổi bật
 
-#### Domain-Driven Design (DDD)
+#### Lộ trình thử thách FCAJ Buildrathon 2026 (Season 01)
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- Buildrathon là sân chơi dài hạn (6 tháng), tập trung vào bài toán thực tế kết hợp điện toán đám mây AWS với trí tuệ nhân tạo tạo sinh và AI Agent.
+- Các đội được đánh giá theo từng mốc. Tiêu chí đề cao tính ứng dụng, độ ổn định của hệ thống và khả năng mở rộng khi chạy trên môi trường Production, chứ không chỉ dừng ở một bản demo chạy được.
+- Đội DawnMarch có 6 nhóm đại diện tham gia. Trong 6 tháng tới, các nhóm định hướng xây dựng giải pháp trên AWS ở ba mảng:
+  - **Hạ tầng và tính toán:** AWS Lambda cho các luồng xử lý serverless, kết hợp Auto Scaling và Elastic Load Balancing để hệ thống luôn sẵn sàng.
+  - **Dữ liệu:** quản lý các luồng dữ liệu lớn với Amazon S3, Amazon Redshift và Amazon DynamoDB.
+  - **Hệ thống thông minh:** tích hợp Generative AI, Machine Learning và AI Agent để giải quyết bài toán nghiệp vụ.
 
-#### Event-Driven Architecture
+#### The Thinking Behind Building The Bot: kiến trúc AI Agent thực chiến
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+- **Tư duy nền tảng:** chuyển từ việc viết từng prompt rời rạc sang xây dựng một hệ thống AI Agent tự hành. Một agent như vậy cần làm được ba việc:
+  - Phân rã một yêu cầu lớn thành các bước nhỏ có thể thực hiện được.
+  - Quản lý bộ nhớ: bộ nhớ ngắn hạn giữ ngữ cảnh trong một phiên làm việc, bộ nhớ dài hạn lưu lại thông tin cần dùng qua nhiều phiên.
+  - Điều phối công cụ: biết khi nào cần gọi API, truy vấn dữ liệu hay chạy một hàm thay vì chỉ trả lời bằng văn bản.
+- **Kiến trúc tích hợp trong doanh nghiệp:** luồng dữ liệu phải an toàn từ đầu đến cuối; agent lấy tri thức từ cơ sở tri thức của doanh nghiệp và kết nối với các API nội bộ, để câu trả lời dựa trên dữ liệu thật của tổ chức.
+- **Tối ưu vận hành:** khi triển khai thật luôn phải cân bằng ba yếu tố: chi phí cho mỗi lần gọi mô hình, độ trễ phản hồi và độ chính xác. Tăng một yếu tố thường làm giảm yếu tố khác, nên cần chọn điểm cân bằng phù hợp với bài toán.
 
-#### Compute Evolution
+#### Thử thách kỹ thuật khi lên Production
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- **Kiểm soát ảo giác:** dùng guardrails và framework kiểm thử tự động để kiểm tra đầu ra, đảm bảo thông tin agent trả về đáng tin cậy.
+- **Xử lý tình huống biên:** chuẩn bị phương án dự phòng cho các trường hợp mô hình ngôn ngữ lớn không gọi được công cụ, hoặc trả về kết quả sai định dạng mà hệ thống phía sau không đọc được.
 
-#### Amazon Q Developer
+#### Kết nối nghề nghiệp cùng CMC Global
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- Phần Mock-interview cuối chương trình là dịp gặp và trao đổi trực tiếp với đội ngũ HR và Technical Lead của CMC Global về nhu cầu nhân lực trong các mảng Cloud, AI Engineering và Data Analytics.
 
-### Những Gì Học Được
+### Những gì học được
 
-#### Tư Duy Thiết Kế
+#### Tư duy thiết kế
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- **Kiến trúc đi trước, prompt theo sau:** một bot hay agent chạy ổn định trong doanh nghiệp phụ thuộc vào thiết kế hệ thống, không chỉ vào việc tinh chỉnh prompt. Prompt tốt mà kiến trúc yếu thì vẫn hỏng khi gặp dữ liệu thật và lượng người dùng thật.
+- **Bảo mật và an toàn dữ liệu:** AI Agent có quyền gọi công cụ và đọc dữ liệu, nên phải tuân thủ chặt chẽ kiểm soát truy cập và bảo vệ dữ liệu nhạy cảm ngay từ khâu thiết kế.
 
-#### Kiến Trúc Kỹ Thuật
+#### Kiến trúc kỹ thuật
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- Tối ưu kiến trúc điều phối agent trên hạ tầng AWS.
+- Giám sát là phần bắt buộc: ghi log hoạt động của agent và đo hiệu năng của từng bước suy luận, để khi agent trả lời sai có thể lần lại xem lỗi nằm ở bước nào.
 
-#### Chiến Lược Hiện Đại Hóa
+#### Cộng đồng
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- Tinh thần "Pay It Forward" của AWS Study Group tạo động lực để các thành viên kết nối, học từ thực tế và chia sẻ kiến thức liên tục với nhau.
 
-### Ứng Dụng Vào Công Việc
+### Áp dụng vào công việc
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+- **Chuẩn hoá kiến trúc AI Agent:** tách agent thành các thành phần rõ ràng: lập kế hoạch, bộ nhớ và công cụ, rồi áp dụng cách tổ chức này vào các dự án tự động hoá và xử lý dữ liệu đang làm.
+- **Chuẩn bị cho Buildrathon:** cùng nhóm lên kế hoạch thiết kế sản phẩm và chuẩn bị môi trường thử nghiệm trên AWS cho các chặng tiếp theo.
+- **Kiểm thử trước khi vận hành:** đặt tiêu chí đo độ chính xác và kiểm soát rủi ro bảo mật trước khi đưa bất kỳ giải pháp AI nào vào chạy thật.
 
-### Trải nghiệm trong event
+### Trải nghiệm sự kiện
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Buổi Kickoff FCAJ Buildrathon 2026 Season 01 tại văn phòng AWS Việt Nam là buổi mở màn có nhiều giá trị chuyên môn.
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### Học từ chuyên gia
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+- Phần chia sẻ của CMC Global cho tôi góc nhìn trực tiếp về những khó khăn khi đưa AI Agent từ giai đoạn thử nghiệm lên hệ thống Production của doanh nghiệp, điều mà các bài hướng dẫn thường không nói tới.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+#### Không khí sự kiện
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+- Sự kiện quy tụ rất đông builder và kỹ sư. Được trao đổi trực tiếp tại văn phòng AWS giúp tôi nối các mảng kiến thức từ hạ tầng Cloud, Data Engineering đến AI lại với nhau.
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+#### Minh chứng tham dự
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+- Bài đăng LinkedIn của Xóm Data về buổi Kickoff, có tên tôi trong danh sách các đội tham gia: <https://lnkd.in/p/ea265it3>
+
+#### Hình ảnh sự kiện
+
+![Poster sự kiện Buildrathon Kickoff](/images/4-eventparticipated/4.1-event1/poster.png)
+_Hình 1: Poster sự kiện Buildrathon Kickoff: Code the Future with CMC Global._
+
+![Check-in tại sảnh văn phòng AWS](/images/4-eventparticipated/4.1-event1/anh-tuong-its-still-day-1.png)
+_Hình 2: Check-in tại sảnh "It's Still Day 1" của văn phòng AWS, cạnh standee chuyên đề của CMC Global và AWS._
+
+![Ảnh chụp chung trong phòng hội thảo](/images/4-eventparticipated/4.1-event1/anh-nhom-hanoi-team.png)
+_Hình 3: Ảnh chụp chung cùng diễn giả trong phòng hội thảo._
+
+![Phòng hội thảo trong phần talkshow](/images/4-eventparticipated/4.1-event1/anh-phong-hoi-thao.png)
+_Hình 4: Phòng hội thảo trong phần talkshow "The Thinking Behind Building The Bot"._
+
+> Buổi Kickoff cho tôi kiến thức cập nhật về AI Agent và là bước khởi đầu để tự tin bước vào hành trình 6 tháng của Buildrathon Season 01.

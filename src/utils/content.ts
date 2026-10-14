@@ -1,31 +1,36 @@
-import type { Language } from '../contexts/LanguageContext';
+import type { Language } from "../contexts/LanguageContext";
 
-const activeContent = import.meta.glob('/content/**/*.md', {
-  query: '?raw',
-  import: 'default',
+const activeContent = import.meta.glob("/content/**/*.md", {
+  query: "?raw",
+  import: "default",
   eager: true,
 }) as Record<string, string>;
 
-const templateContent = import.meta.glob('/content-template/**/*.md', {
-  query: '?raw',
-  import: 'default',
+const templateContent = import.meta.glob("/content/**/*.md", {
+  query: "?raw",
+  import: "default",
   eager: true,
 }) as Record<string, string>;
 
-export type ContentSource = 'active' | 'template' | 'missing';
+export type ContentSource = "active" | "template" | "missing";
 
 export interface LoadedContent {
   markdown: string;
   source: ContentSource;
+  filePath?: string;
 }
 
-function contentPath(root: 'content' | 'content-template', key: string, language: Language) {
-  const suffix = language === 'vi' ? '.vi.md' : '.md';
+function contentPath(
+  root: "content" | "content",
+  key: string,
+  language: Language,
+) {
+  const suffix = language === "vi" ? ".vi.md" : ".md";
   return `/${root}/${key}${suffix}`;
 }
 
 function stripFrontMatter(markdown: string) {
-  return markdown.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, '');
+  return markdown.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 }
 
 function convertNotices(markdown: string) {
@@ -37,7 +42,7 @@ function convertNotices(markdown: string) {
         .trim()
         .split(/\r?\n/)
         .map((line) => `> ${line}`)
-        .join('\n');
+        .join("\n");
       return `> **${label}**\n>\n${quotedBody}`;
     },
   );
@@ -48,37 +53,58 @@ function prepareMarkdown(markdown: string) {
 }
 
 export function loadContent(key: string, language: Language): LoadedContent {
-  const activePath = contentPath('content', key, language);
-  const activeFallbackPath = contentPath('content', key, 'en');
-  const templatePath = contentPath('content-template', key, language);
-  const templateFallbackPath = contentPath('content-template', key, 'en');
+  const activePath = contentPath("content", key, language);
+  const activeFallbackPath = contentPath("content", key, "en");
+  const templatePath = contentPath("content", key, language);
+  const templateFallbackPath = contentPath("content", key, "en");
 
-  const activeMarkdown = activeContent[activePath] ?? activeContent[activeFallbackPath];
+  const activeFilePath = activeContent[activePath]
+    ? activePath
+    : activeContent[activeFallbackPath]
+      ? activeFallbackPath
+      : undefined;
+  const activeMarkdown = activeFilePath && activeContent[activeFilePath];
   if (activeMarkdown) {
-    return { markdown: prepareMarkdown(activeMarkdown), source: 'active' };
+    return {
+      markdown: prepareMarkdown(activeMarkdown),
+      source: "active",
+      filePath: activeFilePath.slice(1),
+    };
   }
 
-  const fallbackMarkdown = templateContent[templatePath] ?? templateContent[templateFallbackPath];
+  const templateFilePath = templateContent[templatePath]
+    ? templatePath
+    : templateContent[templateFallbackPath]
+      ? templateFallbackPath
+      : undefined;
+  const fallbackMarkdown = templateFilePath && templateContent[templateFilePath];
   if (fallbackMarkdown) {
-    return { markdown: prepareMarkdown(fallbackMarkdown), source: 'template' };
+    return {
+      markdown: prepareMarkdown(fallbackMarkdown),
+      source: "template",
+      filePath: templateFilePath.slice(1),
+    };
   }
 
   return {
-    source: 'missing',
+    source: "missing",
     markdown:
-      language === 'vi'
-        ? '## Nội dung đang được cập nhật\n\nPhần này chưa có nội dung. Hãy thêm tệp Markdown tương ứng để hoàn thiện báo cáo.'
-        : '## Content in progress\n\nThis section does not have content yet. Add the matching Markdown file to complete the report.',
+      language === "vi"
+        ? "## Nội dung đang được cập nhật\n\nPhần này chưa có nội dung. Hãy thêm tệp Markdown tương ứng để hoàn thiện báo cáo."
+        : "## Content in progress\n\nThis section does not have content yet. Add the matching Markdown file to complete the report.",
   };
 }
 
 export function normalizeAssetUrl(source?: string) {
   if (!source || /^(?:https?:|data:|blob:)/i.test(source)) return source;
 
-  let cleanSource = source.replace(/\\/g, '/').replace(/^(?:\.\.\/)+/, '').replace(/^\//, '');
-  cleanSource = cleanSource.replace(/^static\//i, '');
+  let cleanSource = source
+    .replace(/\\/g, "/")
+    .replace(/^(?:\.\.\/)+/, "")
+    .replace(/^\//, "");
+  cleanSource = cleanSource.replace(/^static\//i, "");
 
-  const imagesPosition = cleanSource.toLowerCase().indexOf('images/');
+  const imagesPosition = cleanSource.toLowerCase().indexOf("images/");
   if (imagesPosition >= 0) {
     cleanSource = cleanSource.slice(imagesPosition);
   }

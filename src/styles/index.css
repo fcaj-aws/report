@@ -1,7 +1,13 @@
 :root {
   color: #182230;
   background: #f7f8fa;
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --sidebar-width: 292px;
@@ -37,7 +43,11 @@ body {
   min-height: 100vh;
   color: var(--slate-900);
   background:
-    radial-gradient(circle at 75% -10%, rgba(255, 153, 0, 0.07), transparent 32rem),
+    radial-gradient(
+      circle at 75% -10%,
+      rgba(255, 153, 0, 0.07),
+      transparent 32rem
+    ),
     linear-gradient(180deg, #fbfbfc 0%, #f7f8fa 100%);
   line-height: 1.65;
 }
@@ -75,7 +85,12 @@ a {
   color: #d8e0eb;
   background:
     linear-gradient(155deg, rgba(255, 255, 255, 0.025), transparent 30%),
-    linear-gradient(180deg, var(--navy-900), var(--navy-800) 55%, var(--navy-950));
+    linear-gradient(
+      180deg,
+      var(--navy-900),
+      var(--navy-800) 55%,
+      var(--navy-950)
+    );
   border-right: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 12px 0 36px rgba(10, 20, 34, 0.08);
 }
@@ -149,12 +164,12 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 22px 20px 15px;
+  margin: 22px 10px 15px;
   padding: 0 14px;
   color: #8491a4;
   background: rgba(4, 11, 21, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.055);
-  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .sidebar-search:focus-within {
@@ -166,7 +181,7 @@ a {
 .sidebar-search input {
   width: 100%;
   min-width: 0;
-  padding: 11px 0;
+  padding: 6px 0;
   color: #f7f9fc;
   background: transparent;
   border: 0;
@@ -239,7 +254,10 @@ a {
   padding-right: 11px;
   color: #9ba8ba;
   border-left: 3px solid transparent;
-  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
 }
 
 .sidebar-nav-row:hover,
@@ -250,7 +268,11 @@ a {
 
 .sidebar-nav-row.active {
   color: white;
-  background: linear-gradient(90deg, rgba(255, 153, 0, 0.13), rgba(255, 153, 0, 0.015));
+  background: linear-gradient(
+    90deg,
+    rgba(255, 153, 0, 0.13),
+    rgba(255, 153, 0, 0.015)
+  );
   border-left-color: var(--orange-500);
 }
 
@@ -331,7 +353,6 @@ a {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.sidebar-footer > a,
 .sidebar-footer > button {
   display: flex;
   width: 100%;
@@ -348,10 +369,42 @@ a {
   cursor: pointer;
 }
 
-.sidebar-footer > a:hover,
 .sidebar-footer > button:hover:not(:disabled) {
   color: white;
   background: rgba(255, 255, 255, 0.045);
+}
+
+.sidebar-community-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.sidebar-community-links a {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 7px;
+  padding: 9px 7px;
+  color: #91a0b4;
+  font-size: 11.5px;
+  font-weight: 650;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.sidebar-community-links a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(255, 153, 0, 0.25);
 }
 
 .sidebar-footer > button:disabled {
@@ -584,6 +637,7 @@ a {
 .profile-meta {
   position: relative;
   display: flex;
+  justify-content: space-between;
   gap: 28px;
   margin-top: 32px;
   padding-top: 21px;
@@ -631,7 +685,10 @@ a {
   border: 1px solid var(--slate-200);
   border-radius: 15px;
   box-shadow: var(--shadow-sm);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .report-card:hover {
@@ -648,7 +705,9 @@ a {
   color: #738095;
   background: var(--slate-100);
   border-radius: 12px;
-  transition: color 180ms ease, background 180ms ease;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
   place-items: center;
 }
 
@@ -683,7 +742,9 @@ a {
 .report-card-arrow {
   flex: 0 0 auto;
   color: #b6bec9;
-  transition: color 180ms ease, transform 180ms ease;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .report-card:hover .report-card-arrow {
@@ -695,17 +756,30 @@ a {
   margin-bottom: 27px;
 }
 
+.breadcrumb-bar {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 7px 15px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
 .breadcrumbs {
-  display: inline-flex;
+  display: flex;
+  min-width: 0;
+  flex: 1;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-bottom: 28px;
   color: #7c899b;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.breadcrumbs > span {
+.breadcrumb-segment {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -714,12 +788,117 @@ a {
 .breadcrumbs a {
   display: inline-flex;
   align-items: center;
-  color: #647287;
+  color: #3273c9;
   text-decoration: none;
 }
 
 .breadcrumbs a:hover {
-  color: var(--orange-500);
+  color: #1959ae;
+}
+
+.breadcrumb-segment [aria-current="page"] {
+  color: var(--slate-900);
+}
+
+.breadcrumb-divider {
+  width: 1px;
+  height: 20px;
+  flex: 0 0 1px;
+  margin-inline: 2px 4px;
+  background: #d5dae2;
+}
+
+.toc-menu {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.toc-trigger {
+  display: grid;
+  width: 26px;
+  height: 28px;
+  padding: 0;
+  color: var(--navy-900);
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  place-items: center;
+}
+
+.toc-trigger:hover,
+.toc-trigger[aria-expanded="true"] {
+  color: #3273c9;
+  background: #e8edf4;
+}
+
+.toc-popover {
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  z-index: 20;
+  width: min(290px, calc(100vw - 48px));
+  max-height: min(380px, 65vh);
+  overflow-y: auto;
+  padding: 8px 0;
+  background: #f7f8fa;
+  border: 1px solid #e1e5eb;
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0 14px 30px rgba(18, 31, 49, 0.16);
+}
+
+.toc-entry {
+  display: block;
+  width: 100%;
+  padding: 6px 14px;
+  color: #3273c9;
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.4;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.toc-entry:hover,
+.toc-entry:focus-visible {
+  color: #1959ae;
+  background: #e9eef5;
+}
+
+.toc-empty {
+  display: block;
+  padding: 8px 14px;
+  color: var(--slate-500);
+  font-size: 12px;
+}
+
+.edit-page-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  color: #3273c9;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.edit-page-link:hover {
+  color: #1959ae;
+  text-decoration: underline;
+}
+
+.markdown-content h2[id],
+.markdown-content h3[id],
+.markdown-content h4[id],
+.markdown-content h5[id],
+.markdown-content h6[id] {
+  scroll-margin-top: 24px;
 }
 
 .page-heading-row {
@@ -965,7 +1144,10 @@ a {
   border: 1px solid var(--slate-200);
   border-radius: 17px;
   box-shadow: var(--shadow-sm);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .section-card:hover {
@@ -1078,13 +1260,15 @@ a {
   z-index: 25;
   display: grid;
   width: 46px;
-  height: 92px;
+  height: 46px;
   color: white;
   text-decoration: none;
   background: linear-gradient(145deg, var(--orange-500), var(--orange-400));
   box-shadow: 0 8px 24px rgba(255, 153, 0, 0.26);
   transform: translateY(-50%);
-  transition: width 180ms ease, box-shadow 180ms ease;
+  transition:
+    width 180ms ease,
+    box-shadow 180ms ease;
   place-items: center;
 }
 
@@ -1149,7 +1333,9 @@ a {
     visibility: hidden;
     background: rgba(4, 11, 20, 0.5);
     opacity: 0;
-    transition: opacity 180ms ease, visibility 180ms ease;
+    transition:
+      opacity 180ms ease,
+      visibility 180ms ease;
   }
 
   .sidebar-backdrop.visible {
@@ -1191,6 +1377,20 @@ a {
   .page-container {
     padding-inline: 20px;
     padding-bottom: 42px;
+  }
+
+  .breadcrumb-bar {
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    padding: 9px 12px;
+  }
+
+  .breadcrumbs {
+    flex-basis: 100%;
+  }
+
+  .toc-popover {
+    left: -12px;
   }
 
   .home-hero {

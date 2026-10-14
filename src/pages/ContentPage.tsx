@@ -6,18 +6,22 @@ import { PageHeader } from '../components/PageHeader';
 import { SectionCards } from '../components/SectionCards';
 import { useLanguage } from '../contexts/LanguageContext';
 import { findNavigationItem } from '../data/navigation';
+import { useTableOfContents } from '../hooks/useTableOfContents';
 import { loadContent } from '../utils/content';
 
 export function ContentPage() {
   const location = useLocation();
   const { language } = useLanguage();
   const item = findNavigationItem(location.pathname);
+  const content = item?.contentKey ? loadContent(item.contentKey, language) : undefined;
+  const { contentRef, items: tableOfContents } = useTableOfContents(
+    content?.markdown ?? '',
+    location.pathname,
+  );
 
-  if (!item || !item.contentKey) {
+  if (!item || !content) {
     return <Navigate to="/" replace />;
   }
-
-  const content = loadContent(item.contentKey, language);
 
   return (
     <motion.article
@@ -26,7 +30,7 @@ export function ContentPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.28 }}
     >
-      <PageHeader item={item} />
+      <PageHeader item={item} tableOfContents={tableOfContents} editFilePath={content.filePath} />
 
       {content.source === 'template' && (
         <div className="starter-content-notice">
@@ -39,7 +43,7 @@ export function ContentPage() {
         </div>
       )}
 
-      <div className="content-surface">
+      <div className="content-surface" ref={contentRef}>
         <MarkdownContent markdown={content.markdown} />
       </div>
 

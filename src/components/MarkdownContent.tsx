@@ -41,7 +41,7 @@ export function MarkdownContent({ markdown }: MarkdownContentProps) {
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
         components={{
-          h1: ({ children, ...props }) => <h2 {...props}>{children}</h2>,
+          h1: ({ children, ...props }) => <h2 data-toc-exclude="true" {...props}>{children}</h2>,
           a: MarkdownLink,
           img: ({ src, alt, ...props }) => (
             <img src={normalizeAssetUrl(src)} alt={alt ?? ''} loading="lazy" {...props} />

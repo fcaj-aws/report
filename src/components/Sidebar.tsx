@@ -1,9 +1,24 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Check, ChevronDown, ChevronRight, Facebook, Globe2, Menu, RotateCcw, Search, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
-import { flatNavigation, navigation, type NavigationItem } from '../data/navigation';
-import { NavigationIcon } from './NavigationIcon';
+import {
+  Check,
+  ChevronDown,
+  ChevronRight,
+  Facebook,
+  Globe2,
+  Menu,
+  RotateCcw,
+  Rss,
+  Search,
+  X,
+} from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
+import {
+  flatNavigation,
+  navigation,
+  type NavigationItem,
+} from "../data/navigation";
+import { NavigationIcon } from "./NavigationIcon";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -42,7 +57,7 @@ function NavigationBranch({
   return (
     <div>
       <div
-        className={`sidebar-nav-row ${isActive ? 'active' : ''} ${containsActivePage ? 'active-parent' : ''}`}
+        className={`sidebar-nav-row ${isActive ? "active" : ""} ${containsActivePage ? "active-parent" : ""}`}
         style={{ paddingLeft: `${18 + depth * 18}px` }}
       >
         <Link to={item.path} className="sidebar-nav-link" onClick={onNavigate}>
@@ -52,7 +67,9 @@ function NavigationBranch({
             <span className="child-dot" aria-hidden="true" />
           )}
           <span>{translate(item.label)}</span>
-          {visitedPages.includes(item.path) && <Check className="visited-check" size={15} />}
+          {visitedPages.includes(item.path) && (
+            <Check className="visited-check" size={15} />
+          )}
         </Link>
 
         {hasChildren && (
@@ -60,9 +77,13 @@ function NavigationBranch({
             type="button"
             className="sidebar-expand-button"
             onClick={() => toggleExpanded(item.id)}
-            aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${translate(item.label)}`}
+            aria-label={`${isExpanded ? "Collapse" : "Expand"} ${translate(item.label)}`}
           >
-            {isExpanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+            {isExpanded ? (
+              <ChevronDown size={16} />
+            ) : (
+              <ChevronRight size={16} />
+            )}
           </button>
         )}
       </div>
@@ -86,10 +107,16 @@ function NavigationBranch({
   );
 }
 
-export function Sidebar({ isOpen, onOpen, onClose, visitedPages, onResetProgress }: SidebarProps) {
+export function Sidebar({
+  isOpen,
+  onOpen,
+  onClose,
+  visitedPages,
+  onResetProgress,
+}: SidebarProps) {
   const { pathname } = useLocation();
   const { language, setLanguage, translate } = useLanguage();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   useEffect(() => {
@@ -107,7 +134,11 @@ export function Sidebar({ isOpen, onOpen, onClose, visitedPages, onResetProgress
     const normalizedQuery = query.trim().toLocaleLowerCase(language);
     if (!normalizedQuery) return [];
     return flatNavigation
-      .filter((item) => item.label[language].toLocaleLowerCase(language).includes(normalizedQuery))
+      .filter((item) =>
+        item.label[language]
+          .toLocaleLowerCase(language)
+          .includes(normalizedQuery),
+      )
       .slice(0, 7);
   }, [language, query]);
 
@@ -126,17 +157,28 @@ export function Sidebar({ isOpen, onOpen, onClose, visitedPages, onResetProgress
         type="button"
         className="mobile-menu-button"
         onClick={isOpen ? onClose : onOpen}
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? <X size={22} /> : <Menu size={22} />}
       </button>
-      <div className={`sidebar-backdrop ${isOpen ? 'visible' : ''}`} onClick={onClose} />
-      <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <div
+        className={`sidebar-backdrop ${isOpen ? "visible" : ""}`}
+        onClick={onClose}
+      />
+      <aside className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="sidebar-brand">
-          <Link to="/" onClick={onClose} aria-label="FCAJ Internship Report home">
+          <Link
+            to="/"
+            onClick={onClose}
+            aria-label="FCAJ Internship Report home"
+          >
             <span className="aws-wordmark">aws</span>
             <span className="brand-divider" />
-            <span className="brand-program">first cloud<br />journey <strong>AI</strong></span>
+            <span className="brand-program">
+              first cloud
+              <br />
+              journey <strong>AI</strong>
+            </span>
           </Link>
         </div>
 
@@ -145,18 +187,31 @@ export function Sidebar({ isOpen, onOpen, onClose, visitedPages, onResetProgress
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder={language === 'en' ? 'Search report...' : 'Tìm trong báo cáo...'}
+            placeholder={
+              language === "en" ? "Search report..." : "Tìm trong báo cáo..."
+            }
             aria-label="Search report"
           />
           {query && (
-            <button type="button" onClick={() => setQuery('')} aria-label="Clear search">
+            <button
+              type="button"
+              onClick={() => setQuery("")}
+              aria-label="Clear search"
+            >
               <X size={15} />
             </button>
           )}
           {searchResults.length > 0 && (
             <div className="search-results">
               {searchResults.map((item) => (
-                <Link key={item.path} to={item.path} onClick={() => { setQuery(''); onClose(); }}>
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => {
+                    setQuery("");
+                    onClose();
+                  }}
+                >
                   <span>{translate(item.label)}</span>
                   <ChevronRight size={14} />
                 </Link>
@@ -179,22 +234,47 @@ export function Sidebar({ isOpen, onOpen, onClose, visitedPages, onResetProgress
         </nav>
 
         <footer className="sidebar-footer">
-          <a href="https://www.facebook.com/groups/awsstudygroupfcj" target="_blank" rel="noreferrer">
-            <Facebook size={17} />
-            <span>AWS Study Group</span>
-          </a>
-          <button type="button" onClick={() => setLanguage(language === 'en' ? 'vi' : 'en')}>
+          <div className="sidebar-community-links">
+            <a
+              href="https://awsstudygroup.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="AWS Study Group Blog"
+            >
+              <Rss size={16} />
+              <span>Blog Group</span>
+            </a>
+            <a
+              href="https://www.facebook.com/groups/awsstudygroupfcj"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="AWS Study Group Facebook Group"
+            >
+              <Facebook size={16} />
+              <span>FB Group</span>
+            </a>
+          </div>
+          <button
+            type="button"
+            onClick={() => setLanguage(language === "en" ? "vi" : "en")}
+          >
             <Globe2 size={17} />
-            <span>{language === 'en' ? 'English' : 'Tiếng Việt'}</span>
+            <span>{language === "en" ? "English" : "Tiếng Việt"}</span>
             <small>{language.toUpperCase()}</small>
           </button>
-          <button type="button" onClick={onResetProgress} disabled={visitedPages.length === 0}>
+          <button
+            type="button"
+            onClick={onResetProgress}
+            disabled={visitedPages.length === 0}
+          >
             <RotateCcw size={17} />
-            <span>{language === 'en' ? 'Reset Progress' : 'Đặt Lại Tiến Trình'}</span>
+            <span>
+              {language === "en" ? "Reset Progress" : "Đặt Lại Tiến Trình"}
+            </span>
             <small>{visitedPages.length}</small>
           </button>
           <div className="sidebar-updated">
-            <span>{language === 'en' ? 'LAST UPDATED' : 'CẬP NHẬT'}</span>
+            <span>{language === "en" ? "LAST UPDATED" : "CẬP NHẬT"}</span>
             <time>{__BUILD_DATE__}</time>
           </div>
         </footer>

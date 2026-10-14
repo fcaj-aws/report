@@ -1,30 +1,49 @@
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight, GitBranch } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import type { FlatNavigationItem } from '../data/navigation';
+import { navigation, type FlatNavigationItem } from '../data/navigation';
+import type { TableOfContentsItem } from '../hooks/useTableOfContents';
 import { NavigationIcon } from './NavigationIcon';
+import { TableOfContentsMenu } from './TableOfContentsMenu';
 
-export function PageHeader({ item }: { item: FlatNavigationItem }) {
-  const { translate } = useLanguage();
+interface PageHeaderProps {
+  item: FlatNavigationItem;
+  tableOfContents: TableOfContentsItem[];
+  editFilePath?: string;
+}
+
+export function PageHeader({ item, tableOfContents, editFilePath }: PageHeaderProps) {
+  const { language, translate } = useLanguage();
   const breadcrumbs = [...item.parents, item];
+  const editUrl = editFilePath
+    ? `https://github.com/fcaj-aws/report/edit/main/${encodeURI(editFilePath)}`
+    : undefined;
 
   return (
     <header className="page-header">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link to="/" aria-label="Home">
-          <Home size={15} />
-        </Link>
-        {breadcrumbs.filter((crumb) => crumb.path !== '/').map((crumb) => (
-          <span key={crumb.path}>
-            <ChevronRight size={14} />
-            {crumb.path === item.path ? (
-              <span>{translate(crumb.label)}</span>
-            ) : (
-              <Link to={crumb.path}>{translate(crumb.label)}</Link>
-            )}
-          </span>
-        ))}
-      </nav>
+      <div className="breadcrumb-bar">
+        <nav className="breadcrumbs" aria-label="Breadcrumb">
+          <TableOfContentsMenu items={tableOfContents} />
+          <span className="breadcrumb-divider" aria-hidden="true" />
+          <Link to="/" className="breadcrumb-home-link">{translate(navigation[0].label)}</Link>
+          {breadcrumbs.filter((crumb) => crumb.path !== '/').map((crumb) => (
+            <span className="breadcrumb-segment" key={crumb.path}>
+              <ChevronRight size={14} aria-hidden="true" />
+              {crumb.path === item.path ? (
+                <span aria-current="page">{translate(crumb.label)}</span>
+              ) : (
+                <Link to={crumb.path}>{translate(crumb.label)}</Link>
+              )}
+            </span>
+          ))}
+        </nav>
+        {editUrl && (
+          <a className="edit-page-link" href={editUrl} target="_blank" rel="noreferrer">
+            <GitBranch size={15} aria-hidden="true" />
+            {language === 'en' ? 'Edit this page' : 'Chỉnh sửa trang này'}
+          </a>
+        )}
+      </div>
 
       <div className="page-heading-row">
         <div className="page-heading-icon">

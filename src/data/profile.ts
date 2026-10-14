@@ -1,23 +1,24 @@
 export const profile = {
-  name: 'Nguyen Van A',
-  phone: '0989888999',
-  email: 'Anguyenvan@gmail.com',
+  name: "Tran Nguyen Thuong Truong",
+  phone: "0917085937",
+  email: "thuongtruongofficial@gmail.com",
   university: {
-    en: 'Ho Chi Minh City University of Technology and Education',
-    vi: 'Đại học Sư phạm Kỹ thuật TP.HCM',
+    en: "International University - VNU HCMC",
+    vi: "Đại học Quốc Tế - Đại học Quốc gia TP.HCM",
   },
   major: {
-    en: 'Information Technology',
-    vi: 'Công nghệ thông tin',
+    en: "Information Technology",
+    vi: "Công nghệ thông tin",
   },
-  className: 'AWS082025',
   company: {
-    en: 'Amazon Web Services Vietnam',
-    vi: 'Amazon Web Services Việt Nam',
+    en: "Amazon Web Services Vietnam",
+    vi: "Amazon Web Services Việt Nam",
   },
-  position: 'Workforce Bootcamp — First Cloud AI Journey',
+  position: "Workforce Bootcamp — First Cloud AI Journey",
+  className: "AWS092026",
+  team: "DawnMarch",
   duration: {
-    en: '12 Aug 2025 — 12 Nov 2025',
-    vi: '12/08/2025 — 12/11/2025',
+    en: "26 Sep 2026 - 26 Nov 2026",
+    vi: "26/09/2026 - 26/11/2026",
   },
 };
